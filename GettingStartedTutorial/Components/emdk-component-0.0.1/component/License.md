@@ -1,3 +1,0 @@
-# emdk-component license
-
-EULA
