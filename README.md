@@ -24,4 +24,6 @@ Placeholder for component upgrade instructions
 
 ## Using this repo
 
-!
+![img](images/change_branch.png)
+
+![img](images/download_zip.png)
