@@ -13,6 +13,7 @@ This repository contains sample and tutorial projects using the EMDK for Xamarin
 ###Tutorials
 
 * [GettingStartedTutorial](https://github.com/EMDK/xamarin-samples/archive/GettingStartedTutorial.zip)
+	* - [View project details](https://github.com/EMDK/xamarin-samples/tree/GettingStartedTutorial)
 
 
 
@@ -22,8 +23,8 @@ This repository contains sample and tutorial projects using the EMDK for Xamarin
 Placeholder for component upgrade instructions
 
 
-## Using this repo
 
-![img](images/change_branch.png)
 
-![img](images/download_zip.png)
+<!--![img](images/change_branch.png)-->
+
+
