@@ -2,7 +2,6 @@
 
 This repository contains sample and tutorial projects using the EMDK for Xamarin Component
 
-##Download Projects
 ###Samples
 
 * [BarcodeSample1]()
