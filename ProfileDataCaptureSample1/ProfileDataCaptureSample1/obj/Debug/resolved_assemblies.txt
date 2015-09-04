@@ -1,0 +1,8 @@
+/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Debug/assemblies/ProfileDataCaptureSample1.dll
+/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Debug/assemblies/Mono.Android.dll
+/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Debug/assemblies/mscorlib.dll
+/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Debug/assemblies/Symbol.XamarinEMDK.dll
+/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Debug/assemblies/System.dll
+/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Debug/assemblies/System.Xml.Linq.dll
+/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Debug/assemblies/System.Xml.dll
+/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Debug/assemblies/System.Core.dll
