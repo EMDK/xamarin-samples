@@ -12,7 +12,7 @@ This repository contains sample and tutorial projects using the EMDK for Xamarin
 
 ###Tutorials
 
-*[GettingStartedTutorial](https://github.com/EMDK/xamarin-samples/archive/GettingStartedTutorial.zip)
+* [GettingStartedTutorial](https://github.com/EMDK/xamarin-samples/archive/GettingStartedTutorial.zip)
 
 
 
