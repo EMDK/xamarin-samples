@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #EMDK for Xamarin Sample and Tutorial Projects
 
 This repository contains sample and tutorial projects using the EMDK for Xamarin Component
@@ -13,4 +14,8 @@ This repository contains sample and tutorial projects using the EMDK for Xamarin
 
 
 
+=======
+# xamarin-samples
+This repository contains sample projects using the EMDK Xamarin Component
+>>>>>>> GettingStartedTutorial
 
