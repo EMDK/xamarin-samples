@@ -1,6 +1,0 @@
-/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Release/android/assets/ProfileDataCaptureSample1.dll
-/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Release/android/assets/Mono.Android.dll
-/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Release/android/assets/mscorlib.dll
-/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Release/android/assets/Symbol.XamarinEMDK.dll
-/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Release/android/assets/System.dll
-/Users/robgalvin/Xamarin/xamarin/samples/ProfileDataCaptureSample1/ProfileDataCaptureSample1/obj/Release/android/assets/System.Core.dll
