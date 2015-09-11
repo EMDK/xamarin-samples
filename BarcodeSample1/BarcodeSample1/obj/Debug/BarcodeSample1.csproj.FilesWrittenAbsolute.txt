@@ -1,0 +1,14 @@
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/bin/Debug/BarcodeSample1.dll.mdb
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/bin/Debug/BarcodeSample1.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/bin/Debug/Symbol.XamarinEMDK.BarcodeSample1.apk
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/android/bin/Symbol.XamarinEMDK.BarcodeSample1.apk
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/res/layout/main.xml
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/res/values/strings.xml
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/res/drawable/icon.png
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/R.cs.flag
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/bin/Debug/Symbol.XamarinEMDK.BarcodeSample1-Signed.apk
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/uploadflags.txt
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/BarcodeSample1.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/BarcodeSample1.dll.mdb
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/bin/Debug/Symbol.XamarinEMDK.dll

@@ -1,0 +1,8 @@
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/assemblies/BarcodeSample1.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/assemblies/Mono.Android.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/assemblies/mscorlib.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/assemblies/Symbol.XamarinEMDK.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/assemblies/System.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/assemblies/System.Xml.Linq.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/assemblies/System.Xml.dll
+/Users/bhecox/Development/emdk/xamarin/samples/BarcodeSample1/BarcodeSample1/obj/Debug/assemblies/System.Core.dll
