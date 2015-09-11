@@ -4,7 +4,7 @@ This repository contains sample and tutorial projects using the EMDK for Xamarin
 
 ###Samples
 
-* [BarcodeSample1](https://github.com/EMDK/xamarin-samples/tree/GettingStartedTutorialBarcodeSample1) 
+* [BarcodeSample1](https://github.com/EMDK/xamarin-samples/tree/BarcodeSample1) 
 * [ProfileDataCaptureSample1](https://github.com/EMDK/xamarin-samples/tree/ProfileDataCaptureSample1) 
 
 ###Tutorials
