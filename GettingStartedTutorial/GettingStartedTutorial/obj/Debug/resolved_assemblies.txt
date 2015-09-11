@@ -1,0 +1,2 @@
+c:\users\billie hecox\documents\visual studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Debug\assemblies\GettingStartedTutorial.dll
+c:\users\billie hecox\documents\visual studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Debug\assemblies\Symbol.EMDK.Xamarin.dll

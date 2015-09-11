@@ -1,0 +1,7 @@
+C:\Users\Billie Hecox\Documents\Visual Studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Release\android\assets\GettingStartedTutorial.dll
+C:\Users\Billie Hecox\Documents\Visual Studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Release\android\assets\Mono.Android.dll
+C:\Users\Billie Hecox\Documents\Visual Studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Release\android\assets\mscorlib.dll
+C:\Users\Billie Hecox\Documents\Visual Studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Release\android\assets\Symbol.XamarinEMDK.dll
+C:\Users\Billie Hecox\Documents\Visual Studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Release\android\assets\System.Core.dll
+C:\Users\Billie Hecox\Documents\Visual Studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Release\android\assets\System.dll
+C:\Users\Billie Hecox\Documents\Visual Studio 2013\Projects\GettingStartedTutorial\GettingStartedTutorial\obj\Release\android\assets\System.Xml.dll
