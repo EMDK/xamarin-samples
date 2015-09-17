@@ -1,8 +1,0 @@
-Z:\Development\emdk\xamarin\samples\ProfileDataCaptureSample1\ProfileDataCaptureSample1\obj\Debug\assemblies\ProfileDataCaptureSample1.dll
-Z:\Development\emdk\xamarin\samples\ProfileDataCaptureSample1\ProfileDataCaptureSample1\obj\Debug\assemblies\Mono.Android.dll
-Z:\Development\emdk\xamarin\samples\ProfileDataCaptureSample1\ProfileDataCaptureSample1\obj\Debug\assemblies\mscorlib.dll
-Z:\Development\emdk\xamarin\samples\ProfileDataCaptureSample1\ProfileDataCaptureSample1\obj\Debug\assemblies\Symbol.XamarinEMDK.dll
-Z:\Development\emdk\xamarin\samples\ProfileDataCaptureSample1\ProfileDataCaptureSample1\obj\Debug\assemblies\System.Core.dll
-Z:\Development\emdk\xamarin\samples\ProfileDataCaptureSample1\ProfileDataCaptureSample1\obj\Debug\assemblies\System.dll
-Z:\Development\emdk\xamarin\samples\ProfileDataCaptureSample1\ProfileDataCaptureSample1\obj\Debug\assemblies\System.Xml.dll
-Z:\Development\emdk\xamarin\samples\ProfileDataCaptureSample1\ProfileDataCaptureSample1\obj\Debug\assemblies\System.Xml.Linq.dll
