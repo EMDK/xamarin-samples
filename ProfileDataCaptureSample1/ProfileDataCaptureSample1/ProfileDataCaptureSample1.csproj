@@ -43,8 +43,9 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="Symbol.XamarinEMDK">
-      <HintPath>..\Components\emdk-component-0.0.6\lib\android\Symbol.XamarinEMDK.dll</HintPath>
+    <Reference Include="Symbol.XamarinEMDK, Version=1.0.3.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BarcodeSample1\BarcodeSample1\lib\Symbol.XamarinEMDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,13 +75,7 @@
     <AndroidAsset Include="Assets\EMDKConfig.xml" />
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponentReference Include="emdk-component">
-      <Visible>False</Visible>
-      <Version>0.0.6</Version>
-    </XamarinComponentReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Lib\" />
+    <None Include="Lib\Symbol.XamarinEMDK.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -54,12 +54,12 @@ namespace symbol.xamarinemdk.profiledatacapturesample1
             // Check the return status of processProfile
             if (results.StatusCode != EMDKResults.STATUS_CODE.Success)
             {
-                // EMDKManager object initialization success
+                // EMDKManager object initialization failed
                 statusTextView.Text = "EMDKManager object creation failed ...";
             }
             else
             {
-                // EMDKManager object initialization failed
+                // EMDKManager object initialization succeeded
                 statusTextView.Text = "EMDKManager object creation succeeded ...";
             }
         }
@@ -175,7 +175,6 @@ namespace symbol.xamarinemdk.profiledatacapturesample1
             if (statusTextView != null)
             {
                 statusTextView.Text = resultString;
-                Console.WriteLine("Status: " + results.StatusCode + " ExtendedStatus: " + results.ExtendedStatusCode + "\n" + results.StatusString);
             }
         }
 
