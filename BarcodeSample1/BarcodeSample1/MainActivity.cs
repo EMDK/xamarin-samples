@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Threading;
+using System.Collections.Generic;
+
 using Android.App;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using System.Collections.Generic;
-using System.Threading;
+
 using Symbol.XamarinEMDK;
 using Symbol.XamarinEMDK.Barcode;
 
@@ -25,10 +27,10 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
         private Scanner scanner = null;
 
         // Declare a flag for continuous scan mode
-        private Boolean isContinuousMode = false;
+        private bool isContinuousMode = false;
 
         // Declare a flag to save the current state of continuous mode flag during OnPause() and Bluetooth scanner Disconnected event.
-        private Boolean isContinuousModeSaved = false;
+        private bool isContinuousModeSaved = false;
 
         private TextView textViewData = null;
         private TextView textViewStatus = null;
@@ -48,9 +50,9 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
         private int defaultIndex = 0; // Keep the default scanner 
         private int triggerIndex = 0; // Keep the selected trigger
 
-        private int dataLength = 0;
+        private int dataCount = 0;
 
-        private String statusString = "";
+        private string statusString = "";
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -62,14 +64,14 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             textViewData = FindViewById<TextView>(Resource.Id.textViewData) as TextView;
             textViewStatus = FindViewById<TextView>(Resource.Id.textViewStatus) as TextView;
             
-            addStartScanButtonListener();
-            addStopScanButtonListener();
-            addSpinnerScannersListener();
-            addSpinnerTriggersListener();
-            addCheckBoxContinuousListener();
-            addCheckBoxDecodersListener();
+            AddStartScanButtonListener();
+            AddStopScanButtonListener();
+            AddSpinnerScannersListener();
+            AddSpinnerTriggersListener();
+            AddCheckBoxContinuousListener();
+            AddCheckBoxDecodersListener();
 
-            populateTriggers();
+            PopulateTriggers();
 
             // The EMDKManager object will be created and returned in the callback
             EMDKResults results = EMDKManager.GetEMDKManager(Application.Context, this);
@@ -77,12 +79,12 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             // Check the return status of GetEMDKManager
             if (results.StatusCode != EMDKResults.STATUS_CODE.Success)
             {
-                // EMDKManager object initialization success
+                // EMDKManager object initialization failed
                 textViewStatus.Text = "Status: EMDKManager object creation failed.";
             }
             else
             {
-                // EMDKManager object initialization failed
+                // EMDKManager object initialization succeeded
                 textViewStatus.Text = "Status: EMDKManager object creation succeeded.";
             }
         }
@@ -92,7 +94,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             base.OnDestroy();
 
             // De-initialize scanner
-            deInitScanner();
+            DeInitScanner();
 
             // Clean up the objects created by EMDK manager
             if (barcodeManager != null)
@@ -121,7 +123,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             isContinuousMode = false;
 
             // De-initialize scanner
-            deInitScanner();
+            DeInitScanner();
  
             if (barcodeManager != null)
             {
@@ -162,7 +164,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
                     }
 
                     // Enumerate scanners 
-                    enumerateScanners();
+                    EnumerateScanners();
 
                     // Set selected scanner 
                     spinnerScanners.SetSelection(scannerIndex);
@@ -220,7 +222,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
                 }
 		
                 // Enumerate scanner devices
-                enumerateScanners();
+                EnumerateScanners();
 
                 // Set default scanner
                 spinnerScanners.SetSelection(defaultIndex);
@@ -237,14 +239,14 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
 
         void barcodeManager_Connection(object sender, BarcodeManager.ScannerConnectionEventArgs e)
         {
-            String status;
-            String scannerName = "";
+            string status;
+            string scannerName = "";
 
             ScannerInfo scannerInfo = e.P0;
             BarcodeManager.ConnectionState connectionState = e.P1;
 
-            String statusBT = connectionState.ToString();
-            String scannerNameBT = scannerInfo.FriendlyName;
+            string statusBT = connectionState.ToString();
+            string scannerNameBT = scannerInfo.FriendlyName;
 
             if (scannerList.Count != 0)
             {
@@ -264,9 +266,9 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
                     isContinuousMode = isContinuousModeSaved;  
  
                     // Initialize scanner
-                    initScanner();
-                    setTrigger();
-                    setDecoders();
+                    InitScanner();
+                    SetTrigger();
+                    SetDecoders();
                 }
                 
                 if(connectionState == BarcodeManager.ConnectionState.Disconnected)
@@ -280,7 +282,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
                     isContinuousMode = false;
 
                     // De-initialize scanner
-                    deInitScanner();
+                    DeInitScanner();
                     
                     // Enable UI Controls
                     RunOnUiThread(() => EnableUIControls(true));
@@ -295,7 +297,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
 
         #endregion
 
-        private void addStartScanButtonListener()
+        private void AddStartScanButtonListener()
         {
             Button buttonStartScan = FindViewById<Button>(Resource.Id.buttonStartScan);
             buttonStartScan.Click += buttonStartScan_Click;
@@ -305,7 +307,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
         {
             if (scanner == null)
             {
-                initScanner();
+                InitScanner();
             }
 
             if (scanner != null)
@@ -329,7 +331,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             }
         }
 
-        private void addStopScanButtonListener()
+        private void AddStopScanButtonListener()
         {
             Button buttonStopScan = FindViewById<Button>(Resource.Id.buttonStopScan);
             buttonStopScan.Click += buttonStopScan_Click;
@@ -359,7 +361,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             }
         }
 
-        private void addSpinnerScannersListener()
+        private void AddSpinnerScannersListener()
         {
             spinnerScanners = FindViewById<Spinner>(Resource.Id.spinnerScanners);
             spinnerScanners.ItemSelected += spinnerScanners_ItemSelected;
@@ -368,13 +370,13 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
         void spinnerScanners_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             scannerIndex = e.Position;
-            deInitScanner();
-            initScanner();
-            setTrigger();
-            setDecoders();
+            DeInitScanner();
+            InitScanner();
+            SetTrigger();
+            SetDecoders();
         }
 
-        private void addSpinnerTriggersListener()
+        private void AddSpinnerTriggersListener()
         {
             spinnerTriggers = FindViewById<Spinner>(Resource.Id.spinnerTriggers);
             spinnerTriggers.ItemSelected += spinnerTriggers_ItemSelected;
@@ -383,10 +385,10 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
         void spinnerTriggers_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             triggerIndex = e.Position;
-            setTrigger();
+            SetTrigger();
         }
 
-        private void addCheckBoxContinuousListener()
+        private void AddCheckBoxContinuousListener()
         {
             checkBoxContinuous = FindViewById<CheckBox>(Resource.Id.checkBoxContinuous);
             checkBoxContinuous.CheckedChange += checkBoxContinuous_CheckedChange;
@@ -397,7 +399,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             isContinuousMode = e.IsChecked;
         }
 
-        private void addCheckBoxDecodersListener()
+        private void AddCheckBoxDecodersListener()
         {
             checkBoxEAN8 = FindViewById<CheckBox>(Resource.Id.checkBoxEAN8);
             checkBoxEAN13 = FindViewById<CheckBox>(Resource.Id.checkBoxEAN13);
@@ -412,15 +414,15 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
 
         void decoders_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
-            setDecoders();
+            SetDecoders();
         }
 
-        private void enumerateScanners()
+        private void EnumerateScanners()
         {
             if (barcodeManager != null)
             {
                 int spinnerIndex = 0;
-                List<String> friendlyNameList = new List<String>();
+                List<string> friendlyNameList = new List<string>();
               
                 // Query the supported scanners on the device
                 scannerList = barcodeManager.SupportedDevicesInfo;
@@ -446,13 +448,13 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
                 }
 
                 // Populate the friendly names of the supported scanners into spinner
-                ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleSpinnerItem, friendlyNameList);
+                ArrayAdapter<string> spinnerAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, friendlyNameList);
                 spinnerAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
                 spinnerScanners.Adapter = spinnerAdapter;
             }
         }
 
-        private void populateTriggers()
+        private void PopulateTriggers()
         {
             // Populate the trigger types into spinner
             var spinnerAdapter = ArrayAdapter.CreateFromResource(this, Resource.Array.triggers_array, Android.Resource.Layout.SimpleSpinnerItem);
@@ -460,7 +462,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             spinnerTriggers.Adapter = spinnerAdapter;
         }
 
-        private void initScanner()
+        private void InitScanner()
         {
             if (scanner == null)
             {
@@ -527,6 +529,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
                             Console.WriteLine(ex.StackTrace);
                         }
 
+                        // Submit another read to keep the continuation
                         scanner.Read();
                     }
                     catch (ScannerException ex)
@@ -537,6 +540,8 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
                     }
                     catch (NullReferenceException ex)
                     {
+                        statusString = "Status: An error has occurred.";
+                        RunOnUiThread(() => textViewStatus.Text = statusString);
                         Console.WriteLine(ex.StackTrace);
                     }
                 }
@@ -595,13 +600,13 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
 
 			    foreach(ScanDataCollection.ScanData data in scanData) 
                 {
-                    String dataString = data.Data;
-                    RunOnUiThread(() => displayScanData(dataString));
+                    string dataString = data.Data;
+                    RunOnUiThread(() => DisplayScanData(dataString));
 			    }
 		    }
         }
 
-        private void deInitScanner()
+        private void DeInitScanner()
         {
             if (scanner != null)
             {
@@ -640,11 +645,11 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             }
         }
 
-        private void setTrigger()
+        private void SetTrigger()
         {
             if (scanner == null)
             {
-                initScanner();
+                InitScanner();
             }
 
             if (scanner != null)
@@ -663,18 +668,18 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             }
         }
 
-        private void setDecoders()
+        private void SetDecoders()
         {
             if (scanner == null)
             {
-                initScanner();
+                InitScanner();
             }
 
             if (scanner != null)
             {
                 try
                 {
-                    // Child object should be taken out before changing.
+                    // Config object should be taken out before changing.
                     ScannerConfig config = scanner.GetConfig();
 
                     // Set EAN8
@@ -686,7 +691,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
                     // Set Code39
                     config.DecoderParams.Code39.Enabled = checkBoxCode39.Checked;
 
-                    //Set Code128
+                    // Set Code128
                     config.DecoderParams.Code128.Enabled = checkBoxCode128.Checked;
 
                     // Should be assigned back to the property to get the changes to the lower layers.
@@ -700,7 +705,7 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             }
         }
 
-        private void EnableUIControls(Boolean isEnabled)
+        private void EnableUIControls(bool isEnabled)
         {
             checkBoxEAN8.Enabled = isEnabled;
             checkBoxEAN13.Enabled = isEnabled;
@@ -710,13 +715,13 @@ namespace Symbol.XamarinEMDK.BarcodeSample1
             spinnerTriggers.Enabled = isEnabled;
         }
 
-        private void displayScanData(String data)
+        private void DisplayScanData(string data)
         {
-			if(dataLength ++ > 100) 
+			if(dataCount ++ > 100) 
             { 
-                //Clear the cache after 100 scans
+                // Clear the cache after 100 scans
 				textViewData.Text = "";
-				dataLength = 0;
+				dataCount = 0;
 			}
 
             textViewData.Append(data + "\r\n");
