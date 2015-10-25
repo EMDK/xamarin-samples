@@ -16,4 +16,4 @@ This repository contains sample and tutorial projects using the EMDK for Xamarin
 
 * [GettingStartedTutorial](https://github.com/EMDK/xamarin-samples/tree/GettingStartedTutorial) - EMDK for Xamarin v1.0
 
-
+* [BasicScanningTutorial](https://github.com/EMDK/xamarin-samples/tree/BasicScanningTutorial) - EMDK for Xamarin v1.0
